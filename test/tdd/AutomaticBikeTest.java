@@ -101,10 +101,10 @@ class AutomaticBikeTest {
         assertEquals(1, automaticBike.getGear());
         assertEquals(0, automaticBike.getSpeed());
 
-        for (int counter = 0; counter <= 32; counter++) {
+        for (int counter = 0; counter < 30; counter++) {
             automaticBike.accelerate();
         }
-        assertEquals(42, automaticBike.getSpeed());
+        assertEquals(46, automaticBike.getSpeed());
 
         assertEquals(4, automaticBike.getGear());
     }
@@ -157,14 +157,13 @@ class AutomaticBikeTest {
         assertEquals(1, automaticBike.getGear());
         assertEquals(0, automaticBike.getSpeed());
 
-        for (int counter = 0; counter < 20; counter++) {
+        for (int counter = 0; counter < 25; counter++) {
             automaticBike.accelerate();
         }
-        assertEquals(20, automaticBike.getSpeed());
-        automaticBike.accelerate();
+        assertEquals(30, automaticBike.getSpeed());
         automaticBike.decelerate();
         automaticBike.decelerate();
-        assertEquals(16, automaticBike.getSpeed());
+        assertEquals(26, automaticBike.getSpeed());
 
 
     }
@@ -184,7 +183,7 @@ class AutomaticBikeTest {
         automaticBike.accelerate();
         automaticBike.decelerate();
         automaticBike.decelerate();
-        assertEquals(12, automaticBike.getSpeed());
+        assertEquals(19, automaticBike.getSpeed());
     }
 
 }
